@@ -2,16 +2,17 @@ package com.company;
 
 public class Stack extends LinkedList{
 
+    public void push(Object value){
+        add( 0, value);
+    }
+
+
     public Object pop(){
-        Object poop = get(size() - 1 );
-        remove(size()-1);
+        Object poop = get(0);
+        remove(0);
         return poop;
-
     }
 
-    public void push(Object item){
-        add(0, item);
-    }
 
     public Object peek () {
         return get(size()-1);

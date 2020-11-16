@@ -76,7 +76,7 @@ public class LinkedList {
             return;
         }
         current = head;
-        for (int i = 0; i < index - 1 && current.getNext() != null; i++) {
+        for (int i = 0; i < index && current.getNext() != null; i++) {
             current = current.getNext();
         }
         newNode.setNext(current.getNext());
@@ -124,8 +124,9 @@ public class LinkedList {
         System.out.print("LinkedList->");
         Node n = head;
         while(n != null){
-            System.out.print("Node(" + n.data + ")->");
+            System.out.print("Node[" + n.data + "]->");
             n = n.next;
         }
+        System.out.println();
     }
 }

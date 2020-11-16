@@ -7,57 +7,44 @@ By Ali Khawari :
 
 public class myMain {
     public static void main(String[] args) {
+        System.out.println("Start av List Link : ");
 
         LinkedList list = new LinkedList();
+        list.add(5);
+        list.add(7);
+        list.add(8);
+        list.prettyPrint();
 
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        System.out.println("the list size new is : " + list.size());
-        list.add(0,99);
-        System.out.println("the list size is : " + list.size());
-        System.out.println("list get :");
-        list.add(3);
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println("index number " + i + " : " +  list.get(i));
-        }
-        list.remove(1);
-        System.out.println(list.get(0));
-        System.out.println(list.get(1));
-        System.out.println(list.get(2));
-        System.out.println(list.get(3));
-        System.out.println("list empty ? " + list.empty());
-        System.out.println("is the list contain 5 ? " + list.contains(5));
+        // här vi använd add metod med tar index och vi gav index 1
+        list.add(1,99);
+        list.add(9);
+        list.prettyPrint();
+        System.out.println();
 
-
-        System.out.println("------------------------");
+        System.out.println("----------------------");
         System.out.println("Start of Stack list : ");
-        Stack stack = new Stack();
 
-        for (int i = stack.size()-1; i >= 0  ; i --){
-            System.out.println("index number : " + i + " = " + stack.get(i));
-        }
+        Stack stack = new Stack();
         stack.push(17);
         stack.push(18);
+        stack.push(19);
         stack.push(20);
-        stack.pop();
-        for (int i = stack.size()-1; i >= 0 ; i --){
-            System.out.println("index number : " + i + " = " + stack.get(i));
-        }
+        stack.prettyPrint();
+        System.out.println();
+        System.out.println("Värde som tagit bort med pop funktion =  " + stack.pop());
 
-        System.out.println("----------------------------------------");
+
+        System.out.println("-----------------------");
+        System.out.println("Start av Queue list  : ");
         Queue q = new Queue();
         q.enqueue(12);
         q.enqueue(22);
         q.enqueue(33);
-        for (int i = 0; i < q.size(); i++) {
-            System.out.println("index nr : " + i + " : " +q.get(i));
-        }
-        System.out.println(q.dequeue());
-        for (int i = 0; i < q.size(); i++) {
-            System.out.println("index nr : " + i + " : " +q.get(i));
-        }
-        System.out.println(q.peek());
+        System.out.println("Start av Queue list :");
+        q.prettyPrint();
+        System.out.println();
+        System.out.println("Värde som ska tar bort med dequeue funcktion = " + q.dequeue());
+        System.out.println("Första i kö efter Peek funktion = " + q.peek());
 
 
 
